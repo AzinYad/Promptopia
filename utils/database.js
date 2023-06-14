@@ -8,7 +8,7 @@ export const connectToDB = async () => {
         console.log('MongoDB is already connected')
         return
     }
-
+    console.log('Attempting to connect to MongoDB...');
     try {
         await mongoose.connect(process.env.MONGODB_URI, {
             dbName: "share_prompt",
